@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Length: <input type="number" id="length1" value="0">
+<br>
+Width: <input type="number" id="width" value="0">
+
+<p id= "outputFun"></p>
+
+<button onclick="calcArea()">Get Area</button>
+<script>
+function calcArea() {
+  var alen=document.getElementById("length1").value;
+  var awidth=document.getElementById("width").value;
+  if(alen.length > 10){
+    alert("Length is a number that's greater than 10, hence it will not be accepted. Value is:"+alen);
+    document.getElementById("length1").value=0;
+  }
+  else if(awidth.length > 10){
+    alert("Width is a number that's greater than 10, hence it will not be accepted. Value is:"+awidth);
+     document.getElementById("width").value=0;
+    }
+  else{
+    var area2=document.getElementById("length1").value*document.getElementById("width").value;
+    document.getElementById("outputFun").innerHTML = "Area: "+area2;
+ }
+}
+
+</script>
+
+</body>
+</html>

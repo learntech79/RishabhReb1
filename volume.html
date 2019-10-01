@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Length: <input type="number" id="length1" value="">
+<br>
+Width: <input type="number" id="width" value="">
+<br>
+Height: <input type="number" id="height" value="">
+<br>
+<p id= "outputFun"></p>
+
+
+<button onclick="calcVolume()">Get Value </volume>
+<script>
+
+function calcVolume() {
+var volume = (document.getElementById("length1").value)*(document.getElementById("width").value)*(document.getElementById("height").value);
+
+document.getElementById("outputFun").innerHTML = "volume: "+volume;
+}
+
+
+</script>
+
+</body>
+</html>

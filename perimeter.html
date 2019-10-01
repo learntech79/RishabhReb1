@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Length: <input type="number" id="length1" value="">
+<br>
+Width: <input type="number" id="width" value="">
+
+<p id= "outputFun"></p>
+
+
+<button onclick="calcPerimeter()">Get Perimeter</button>
+<script>
+
+function calcPerimeter() {
+var perimeter = (2*document.getElementById("length1").value)+(2*document.getElementById("width").value);
+
+document.getElementById("outputFun").innerHTML = "Perimeter: "+perimeter;
+}
+
+
+</script>
+
+</body>
+</html>

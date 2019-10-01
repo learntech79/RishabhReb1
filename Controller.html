@@ -1,0 +1,35 @@
+<html>
+<head>
+<style>
+body {
+background-image: url("maxresdefault.jpg");
+}
+</style>
+<title>
+Calcuator
+</title>
+</head>
+<body>
+<center>
+<form onchange="myController()">
+  <select id="Controller">
+    <option value="area.html">Area</option>
+    <option value="perimeter.html">Perimeter</option>
+    <option value="volume.html">Volume</option>
+  </select>
+</form>
+
+<iframe src="blank.html" height="300" id = innnerFrame width="900"></iframe>
+</center>
+<script>
+
+function myController(){
+    var selectedFunction=document.getElementById("Controller").value;
+
+document.getElementById("innnerFrame").src =selectedFunction ;
+document.getElementById("innnerFrame").style="background-color: linen";
+}
+</script>
+</body>
+</html>
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+Length: <input type="text" id="length1" value="">
+<br>
+Width: <input type="text" id="width" value="">
+
+<p id= "outputFun"></p>
+
+<button onclick="calcArea()">Get Area</button>
+<button onclick="calcPerimeter()">Get Perimeter</button>
+<script>
+function calcArea() {
+  var area2=(document.getElementById("length1").value)*document.getElementById("width").value;
+
+ document.getElementById("outputFun").innerHTML = "Area:"+area2;
+}
+
+function calcPerimeter() {
+var perimeter = (2*document.getElementById("length1").value)+(2*document.getElementById("width").value);
+
+document.getElementById("outputFun").innerHTML = "Perimeter:"+perimeter;
+}
+
+
+</script>
+
+</body>
+</html>
