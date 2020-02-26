@@ -1,8 +1,8 @@
 <html>
 <head>
-<title>
-Tic Tac Toe
-</title>
+<h1>TIK TAK TOE!!!!</h1>
+<h2>BY RISHABH MODI!!</h2>
+<h4>(#CREDITS MINE!)</h4>
 <style>
 
 td{
@@ -41,12 +41,8 @@ margin-left:875px;
 
 </style>
 <body>
-<h1>
-Tic-Tac-Toe!
-</h1>
-<h3>
-Made By a Coder
-</h3>
+
+
 <form onchange="Chooser()">
 
 <input type="radio" name="P1" value="1">O<br>
@@ -80,141 +76,165 @@ var foundWinner="false";
 function Trigger(mycell){
 if(foundWinner=="false"){
  Disable(true);
-  	if(mycell.innerHTML != "X" && mycell.innerHTML != "O"){
-		if (OX == 0){
-			mycell.innerHTML="X";
-			OX = 1;
-		}
-		else{
-			mycell.innerHTML="O";
-			OX = 0;
-		}
-	}
-	}
-	 Win();
+    if(mycell.innerHTML != "X" && mycell.innerHTML != "O"){
+        if (OX == 0){
+            mycell.innerHTML="X";
+            OX = 1;
+        }
+        else{
+            mycell.innerHTML="O";
+            OX = 0;
+        }
+    }
+    }
+    cpuRandom();
+     Win();
 }
 function Reset(){
 var arrayCells=document.getElementsByClassName("Cells");
 OX=0;
-	for(var i=0;i<9;i++){
-		arrayCells[i].innerHTML="<br>";
-	}
+    for(var i=0;i<9;i++){
+        arrayCells[i].innerHTML="<br>";
+    }
 Disable(false);
 foundWinner="false";
 }
 function Chooser(){
 var radios = document.getElementsByName('P1');
-	for (var i = 0, length = radios.length; i < length; i++)
-	{
-		 if (radios[i].checked)
-		 {
-		  OX=radios[i].value;
-		  Switch();
-		  alert("Player 1: "+newOX+"!");
+    for (var i = 0, length = radios.length; i < length; i++)
+    {
+         if (radios[i].checked)
+         {
+          OX=radios[i].value;
+          Switch();
+          alert("Player 1: "+newOX+"!");
 
-		  break;
-		 }
-	}
+          break;
+         }
+    }
 document.getElementById("APV_iframe").src=checkedValue;
 }
 function Disable(a){
 var radios = document.getElementsByName('P1');
-	for (var i = 0, length = radios.length; i < length; i++)
-	{
-		 radios[i].disabled=a;
-	}
+    for (var i = 0, length = radios.length; i < length; i++)
+    {
+         radios[i].disabled=a;
+    }
 }
 function changeme(){
-	var newOX=O;
-	if (OX == 1){
-		newOX = O;
-	}
-	else{
-		newOX = X;
-	}
-}
-function Win(){
-	var Cell1=document.getElementById("Cell 1").innerHTML;
-	var Cell2=document.getElementById("Cell 2").innerHTML;
-	var Cell3=document.getElementById("Cell 3").innerHTML;
-	var Cell4=document.getElementById("Cell 4").innerHTML;
-	var Cell5=document.getElementById("Cell 5").innerHTML;
-	var Cell6=document.getElementById("Cell 6").innerHTML;
-	var Cell7=document.getElementById("Cell 7").innerHTML;
-	var Cell8=document.getElementById("Cell 8").innerHTML;
-	var Cell9=document.getElementById("Cell 9").innerHTML;
-	if (Cell1 == "X" && Cell2 == "X" && Cell3 == "X"){
-		alert("X won!");
-		foundWinner="true";
-	}
-	else if (Cell4 == "X" && Cell5 == "X" && Cell6 == "X"){
-		alert("X won!");
-		foundWinner="true";
-	}
-	else if (Cell7 == "X" && Cell8 == "X" && Cell9 == "X"){
-		alert("X won!");
-		foundWinner="true";
-	}
-	else if (Cell1 == "X" && Cell4 == "X" && Cell7 == "X"){
-		alert("X won!");
-		foundWinner="true";
-	}
-	else if (Cell2 == "X" && Cell5 == "X" && Cell8 == "X"){
-		alert("X won!");
-		foundWinner="true";
-	}
-	else if (Cell3 == "X" && Cell6 == "X" && Cell9 == "X"){
-
-	alert("X won!");
-	foundWinner="true";
-	}
-	else if (Cell1 == "X" && Cell5 == "X" && Cell9 == "X"){
-		alert("X won!");
-		foundWinner="true";
-	}
-	else if (Cell7 == "X" && Cell5 == "X" && Cell3 == "X"){
-		alert("X won!");
-		foundWinner="true";
-	}
-	else{
-	}
-
-	if (Cell1 == "O" && Cell2 == "O" && Cell3 == "O"){
-		alert("O won!");
-		foundWinner="true";
-	}
-    else if (Cell4 == "O" && Cell5 == "O" && Cell6 == "O"){
-    	alert("O won!");
-    	foundWinner="true";
-    }
-    else if (Cell7 == "O" && Cell8 == "O" && Cell9 == "O"){
-    	alert("O won!");
-    	foundWinner="true";
-    }
-    else if (Cell1 == "O" && Cell4 == "O" && Cell7 == "O"){
-    	alert("O won!");
-    	foundWinner="true";
-    }
-    else if (Cell2 == "O" && Cell5 == "O" && Cell8 == "O"){
-    	alert("O won!");
-    	foundWinner="true";
-    }
-    else if (Cell3 == "O" && Cell6 == "O" && Cell9 == "O"){
-    	alert("O won!");
-    	foundWinner="true";
-    }
-    else if (Cell1 == "O" && Cell5 == "O" && Cell9 == "O"){
-    	alert("O won!");
-    	foundWinner="true";
-    }
-    else if (Cell7 == "O" && Cell5 == "O" && Cell3 == "O"){
-    	alert("O won!");
-    	foundWinner="true";
+    var newOX=O;
+    if (OX == 1){
+        newOX = O;
     }
     else{
-	}
+        newOX = X;
+    }
+}
+function Win(){
+    var Cell1=document.getElementById("Cell 1").innerHTML;
+    var Cell2=document.getElementById("Cell 2").innerHTML;
+    var Cell3=document.getElementById("Cell 3").innerHTML;
+    var Cell4=document.getElementById("Cell 4").innerHTML;
+    var Cell5=document.getElementById("Cell 5").innerHTML;
+    var Cell6=document.getElementById("Cell 6").innerHTML;
+    var Cell7=document.getElementById("Cell 7").innerHTML;
+    var Cell8=document.getElementById("Cell 8").innerHTML;
+    var Cell9=document.getElementById("Cell 9").innerHTML;
+    if (Cell1 == "X" && Cell2 == "X" && Cell3 == "X"){
+        alert("X won!");
+        foundWinner="true";
+    }
+    else if (Cell4 == "X" && Cell5 == "X" && Cell6 == "X"){
+        alert("X won!");
+        foundWinner="true";
+    }
+    else if (Cell7 == "X" && Cell8 == "X" && Cell9 == "X"){
+        alert("X won!");
+        foundWinner="true";
+    }
+    else if (Cell1 == "X" && Cell4 == "X" && Cell7 == "X"){
+        alert("X won!");
+        foundWinner="true";
+    }
+    else if (Cell2 == "X" && Cell5 == "X" && Cell8 == "X"){
+        alert("X won!");
+        foundWinner="true";
+    }
+    else if (Cell3 == "X" && Cell6 == "X" && Cell9 == "X"){
+
+    alert("X won!");
+    foundWinner="true";
+    }
+    else if (Cell1 == "X" && Cell5 == "X" && Cell9 == "X"){
+        alert("X won!");
+        foundWinner="true";
+    }
+    else if (Cell7 == "X" && Cell5 == "X" && Cell3 == "X"){
+        alert("X won!");
+        foundWinner="true";
+    }
+    else{
+    }
+
+    if (Cell1 == "O" && Cell2 == "O" && Cell3 == "O"){
+        alert("O won!");
+        foundWinner="true";
+    }
+    else if (Cell4 == "O" && Cell5 == "O" && Cell6 == "O"){
+        alert("O won!");
+        foundWinner="true";
+    }
+    else if (Cell7 == "O" && Cell8 == "O" && Cell9 == "O"){
+        alert("O won!");
+        foundWinner="true";
+    }
+    else if (Cell1 == "O" && Cell4 == "O" && Cell7 == "O"){
+        alert("O won!");
+        foundWinner="true";
+    }
+    else if (Cell2 == "O" && Cell5 == "O" && Cell8 == "O"){
+        alert("O won!");
+        foundWinner="true";
+    }
+    else if (Cell3 == "O" && Cell6 == "O" && Cell9 == "O"){
+        alert("O won!");
+        foundWinner="true";
+    }
+    else if (Cell1 == "O" && Cell5 == "O" && Cell9 == "O"){
+        alert("O won!");
+        foundWinner="true";
+    }
+    else if (Cell7 == "O" && Cell5 == "O" && Cell3 == "O"){
+        alert("O won!");
+        foundWinner="true";
+    }
+    else{
+    }
 
 }
+
+function cpuRandom(){
+
+    for(;;){
+        var numRandom= Math.floor(Math.random() * 9)+1;
+        var randomCell='Cell '+numRandom;
+        //alert("computer is running"+randomCell);
+        if(document.getElementById(randomCell).innerHTML != "X" && document.getElementById(randomCell).innerHTML != "O"){
+            if (OX == 0){
+                document.getElementById(randomCell).innerHTML="X";
+                OX = 1;
+
+            }
+            else{
+                document.getElementById(randomCell).innerHTML="O";
+                OX = 0;
+            }
+            break;
+        }
+    }
+}
+
+
 </script>
 </body>
 </html>
